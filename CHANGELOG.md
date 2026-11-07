@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.4.1] : 2026-11-07
+- Settings shows the app version (bottom-left).
+
 ## [v1.4.0] : 2026-11-07
 - Language hotkeys: none by default, **+ Add** any language with its own hotkey and model, ✕ to remove.
 - Main language: all ~100 Whisper languages (was EN / RU / HE).

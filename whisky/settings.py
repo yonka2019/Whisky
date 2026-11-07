@@ -206,6 +206,11 @@ class SettingsWindow(QWidget):
         self.tabs.addTab(page, "General")
 
         bottom = QHBoxLayout()
+        from . import __version__
+        self.version = QLabel(f"Whisky {__version__}")
+        self.version.setStyleSheet(MUTED)
+        self.version.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        bottom.addWidget(self.version)
         bottom.addStretch(1)
         close = QPushButton("Close")
         close.clicked.connect(self.close)

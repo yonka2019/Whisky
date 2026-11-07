@@ -12,7 +12,7 @@ Hold-to-talk dictation for Windows. Local Whisper, ~100 languages (auto-detect o
 - Tray → **Settings…**: hotkeys, language, models (select / download % / delete), microphone, **Live test** (listens, writes each phrase, never pastes), start with Windows, paste options.
 
 ## Install
-`installer\Output\Whisky-Setup-1.4.0.exe` → no admin needed. Installs to `%LOCALAPPDATA%\Programs\Whisky`.
+`installer\Output\Whisky-Setup-1.4.1.exe` → no admin needed. Installs to `%LOCALAPPDATA%\Programs\Whisky`.
 
 Newer setup over an installed one → **Update** (settings and models kept).
 
