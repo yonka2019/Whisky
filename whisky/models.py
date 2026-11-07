@@ -4,16 +4,15 @@ import logging
 from .config import MODELS, MODELS_DIR, REPOS, model_dir, repo_dir
 
 log = logging.getLogger("whisky.models")
-APPROX_MB = {"small": 484, "medium": 1530, "large-v3-turbo": 1620, "large-v3": 3090, "hebrew-turbo": 1620}
+APPROX_MB = {"small": 484, "medium": 1530, "large-v3-turbo": 1620, "large-v3": 3090}
 # avg memory while loaded, whole app, int8: (RAM MB, VRAM MB). Measured on GTX 1050 Ti except ESTIMATED.
 USAGE_MB = {
     "small":          {"gpu": (420, 380),  "cpu": (430, 0)},
     "medium":         {"gpu": (420, 1050), "cpu": (1000, 0)},
     "large-v3-turbo": {"gpu": (420, 1120), "cpu": (1020, 0)},
     "large-v3":       {"gpu": (420, 1900), "cpu": (1900, 0)},
-    "hebrew-turbo":   {"gpu": (420, 1120), "cpu": (1020, 0)},
 }
-ESTIMATED = {"medium", "large-v3", "hebrew-turbo"}
+ESTIMATED = {"medium", "large-v3"}
 _gpu = None
 
 
@@ -80,11 +79,9 @@ CARDS = {
     "medium": ("Medium", "Mid-size, older generation. Slower than turbo.",
                "CPU-only PCs that need more than Small.", 2, 3),
     "large-v3-turbo": ("Large v3 Turbo", "Near-best accuracy, fast on GPU.",
-                       "Everyday dictation in EN / RU / HE — emails, docs, messages.", 3, 3),
+                       "Everyday dictation, any language — emails, docs, messages.", 3, 3),
     "large-v3": ("Large v3", "Most accurate, slowest. Needs a strong GPU.",
                  "Long texts, names and terms, noisy rooms.", 1, 4),
-    "hebrew-turbo": ("Hebrew · ivrit-ai", "Turbo tuned on Hebrew speech. Weaker in English and Russian.",
-                     "Mostly-Hebrew dictation — WhatsApp, emails, documents.", 3, 4),
 }
 
 
@@ -96,7 +93,7 @@ def planned(cfg):
     """Models kept loaded: main + models of language hotkeys that are set (ordered, unique)."""
     out = [resolve_name(cfg["model"])]
     lk = cfg.get("lang_hotkeys") or {}
-    for lang in ("en", "ru", "he"):
+    for lang in lk:
         m = (cfg.get("lang_models") or {}).get(lang)
         if m and lk.get(lang) and resolve_name(m) not in out:
             out.append(resolve_name(m))

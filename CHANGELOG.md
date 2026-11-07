@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.4.0] : 2026-11-07
+- Language hotkeys: none by default, **+ Add** any language with its own hotkey and model, ✕ to remove.
+- Main language: all ~100 Whisper languages (was EN / RU / HE).
+- "?" tips: picking a language = better recognition.
+- Removed the Hebrew (ivrit-ai) model. Settings using it fall back to Auto / "Same as main". Downloaded files are left in place.
+- large-v3-turbo card: "any language" (was "EN / RU / HE").
+- Config: unknown language → Auto-detect; a language model without its hotkey is dropped.
+
 ## [v1.3.2] : 2026-11-06
 ----------- ENV CHANGES -------------
 - `HF_HUB_DISABLE_SYMLINKS=1` (set by the app at start): store model files as real files, no links.
