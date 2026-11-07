@@ -1,7 +1,7 @@
 ; Inno Setup script -> installer\Output\Whisky-Setup-<ver>.exe
 #define AppName "Whisky"
 #ifndef AppVer
-  #define AppVer "1.4.1"
+  #define AppVer "1.4.2"
 #endif
 
 [Setup]

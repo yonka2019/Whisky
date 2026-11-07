@@ -2,6 +2,12 @@
 
 Hold-to-talk dictation for Windows. Local Whisper, ~100 languages (auto-detect or pick one).
 
+![Recording](docs/screenshots/popup-recording.png)
+
+| Dictation | Models |
+|---|---|
+| ![Settings → Dictation](docs/screenshots/settings-dictation.png) | ![Settings → Models](docs/screenshots/settings-models.png) |
+
 ## Use
 - Hold **Right Ctrl** (default) → speak → release → text is pasted into the focused app.
 - Taps under 0.3s and hotkey + other key (e.g. RCtrl+C) are ignored.
@@ -12,7 +18,7 @@ Hold-to-talk dictation for Windows. Local Whisper, ~100 languages (auto-detect o
 - Tray → **Settings…**: hotkeys, language, models (select / download % / delete), microphone, **Live test** (listens, writes each phrase, never pastes), start with Windows, paste options.
 
 ## Install
-`installer\Output\Whisky-Setup-1.4.1.exe` → no admin needed. Installs to `%LOCALAPPDATA%\Programs\Whisky`.
+`installer\Output\Whisky-Setup-1.4.2.exe` → no admin needed. Installs to `%LOCALAPPDATA%\Programs\Whisky`.
 
 Newer setup over an installed one → **Update** (settings and models kept).
 

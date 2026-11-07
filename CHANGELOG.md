@@ -1,5 +1,8 @@
 # Changelog
 
+## [v1.4.2] : 2026-11-07
+- README: screenshots (recording bar, Dictation, Models).
+
 ## [v1.4.1] : 2026-11-07
 - Settings shows the app version (bottom-left).
 
